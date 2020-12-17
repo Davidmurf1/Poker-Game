@@ -1,0 +1,54 @@
+
+
+#poker-table
+{
+background-image: url(img/cigar.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+border:1px solid black;
+}
+
+.heading
+{
+color: white;
+text-align: center;
+justify-content: center;
+}
+
+.joker 
+{
+height: 150px;
+width: 100px;
+border-radius: 10px;
+}
+
+#border
+{
+border: 1px solid black;
+}
+
+#cardA
+{
+border: 1px solid black;
+}
+
+
+#computer-hand
+{
+padding: ;
+border: 1px solid black;
+
+}
+
+#river
+{
+border: 1px solid black;
+padding: x;
+}
+
+#player-hand
+{
+padding: 10px;
+border: 1px solid black;
+}
