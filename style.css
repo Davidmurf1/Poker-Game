@@ -2,53 +2,112 @@
 
 #poker-table
 {
+padding-top: 100px;
+padding-bottom: 100px;
 background-image: url(img/cigar.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
-border:1px solid black;
+
+
 }
 
-.heading
+.header
 {
 color: white;
 text-align: center;
 justify-content: center;
 }
 
+
+/* https://stackoverflow.com/questions/45097172/is-it-possible-to-add-image-as-box-shadow-with-css */
+
 .joker 
 {
 height: 150px;
 width: 100px;
 border-radius: 10px;
+padding:10px;
+  box-shadow: 0px 0px 40px #ccc;
+        -moz-box-shadow: 0px 0px 40px #ccc;
+        -webkit-box-shadow: 0px 0px 40px #ccc;
 }
 
-#border
+@media only screen and (max-width: 600px) {
+  .joker {
+ height: 150px;
+width: 75px;
+border-radius: 5px;
+  }
+}
+
+
+#dealer-hand 
 {
-border: 1px solid black;
-}
+display: flex;
+text-align: center;
+justify-content: center;
 
-#cardA
-{
-border: 1px solid black;
 }
-
 
 #computer-hand
 {
-padding: ;
-border: 1px solid black;
+display: flex;
+text-align: center;
+justify-content: center;
 
 }
+
+
 
 #river
 {
-border: 1px solid black;
-padding: x;
+
+display: flex;
+text-align: center;
+justify-content: center;
 }
 
-#player-hand
+#dealer-player
 {
+display: flex;
+text-align: center;
+justify-content: center;
+}
+
+
+
+.player
+{
+padding-left: 100px;
+}
+
+
+#actions
+{
+display: flex;
+text-align: center;
+justify-content: center;
 padding: 10px;
-border: 1px solid black;
+}
+.distribute
+{
+display: flex;
+}
+
+.bet
+{
+
+display: flex;
+}
+
+.fold
+{
+display: flex;
+}
+
+button
+{
+background-color: red;
+color:white;
 }
