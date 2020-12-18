@@ -13,52 +13,73 @@
 
 	<link rel="stylesheet" href="style1.css">
 
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
 
 </head>
 <body>
 
-<header>
-
-</header>
-
-<div class="container" id="poker-table">
-
-<div class="heading">
-<h1>The game is Texas Hold'em poker!</h1>
-<p>Best of luck !</p>
+<div class="container-fluid" id="poker-table">
+<div class="header">
+<h1>The game is Texas Hold'em Poker!</h1>
+<p>Best of Luck!</p>
 </div>
 
-<div class="row" id="computer-hand">
+<!-- The Computer's hand, 2 cards -->
+<div class="row" >
+<div id="computer-hand">
 
-<img class ="col-1 offset-4 joker" src="img/card.png" >
+<img class="col-sm-2 joker" src="img/card.png" alt="card">
 
-<img class =" col-1 joker" src="img/card.png" >
-
+<img class="col-sm-2 joker" src="img/card.png" alt="card">
+</div>
 </div>
 
+
+<!-- The River, 5 cards -->
 <div class="row" id="river">
+<img class="col-sm-2 joker" src="img/card.png" alt="card">
+<img class="col-sm-2 joker" src="img/card.png" alt="card">
+<img class="col-sm-2 joker" src="img/card.png" alt="card">
 
 
-<img class ="col-sm-1 joker" src="img/card.png" id="cardA">
-<img class ="col-sm-1 joker" src="img/card.png" id="cardA">
-<img class ="col-sm-1 joker" src="img/card.png" id="cardA">
-<img class ="col-sm-1 joker" src="img/card.png" id="cardA">
-<img class ="col-sm-1 joker" src="img/card.png" id="cardA">
-</div>
+<img class="col-sm-2 joker" src="img/card.png" alt="card">
 
-<div class="row" id="player-hand">
-
-<div class="col-sm-1">
-<img class ="joker" src="img/card.png" id="cardA">
-</div>
-<div class="col-sm-1">
-<img class ="joker" src="img/card.png" id="cardA">
-</div>
+<img class="col-sm-2 joker" src="img/card.png" alt="card">
 </div>
 
 
 
 
 
+
+<div class="row" id="dealer-player">
+
+<!-- Dealer Hand-->
+<div class="dealer">
+<img class="col-sm-2  joker" src="img/card.png" alt="card">
 </div>
+
+<!-- player's Hand, also 2 cards-->
+<div class="player">
+<img class="col-sm-2 joker" src="img/card.png" alt="card">
+<img class="col-sm-2 joker" src="img/card.png" alt="card">
+</div>
+</div>
+
+<div class="row" id="actions">
+<div class="col-sm-2" id="distribute">
+<button>Deal</button>
+</div>
+<div class="col-sm-2" id="bet">
+<button>Play</button>
+</div>
+<div class="col-sm-2" id="fold">
+<button>Fold</button>
+</div>
+</div>
+
+
+
+
+</body>
+</html>
