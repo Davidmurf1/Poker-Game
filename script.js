@@ -22,8 +22,8 @@ console.log(deck)
 
  /* Fisher-Yates Shuffle
  Note::
- X begins at index position 1 (not 0), then loops in reverse through deck picking a random
- Y is a random number, the original length of X
+ X begins at index position 1, then loops in reverse through deck
+ Y is a random number, the original lenght of X
  generate number between 0-52,then 52 etc
  assigns temp the value of x
  then assigns x the position of y
@@ -67,26 +67,25 @@ console.log(result)
 
 
 /*Include 0 in selection as it is a card */
+let empty = [];
 
-
+for (i=0; i < 7; i++) {
 function randomSelect(minimum, maximum) {
 return Math.floor(Math.random() * (maximum - minimum)) + minimum;
 }
-
 let choice = randomSelect(0,53)
-let empty = [];
-let pick = empty.push(choice) ;
+let pick = empty.push(choice);
+}
+console.log(empty)
 
 
-console.log()
-
-let cardA = result[empty];
-let cardB = result[empty];
-let cardC = result[empty];
-let cardD = result[empty];
-let cardE = result[empty];
-let cardF = result[empty];
-let cardG = result[empty];
+let cardA = result[empty[0]];
+let cardB = result[empty[1]];
+let cardC = result[empty[2]];
+let cardD = result[empty[3]];
+let cardE = result[empty[4]];
+let cardF = result[empty[5]];
+let cardG = result[empty[6]];
 
 console.log(cardA);
 console.log(cardB);
