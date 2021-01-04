@@ -28,23 +28,17 @@
 <div class="row" >
 <div id="computer-hand">
 
-<img class="col-sm-2 joker" src="img/card.png" alt="card">
-
-<img class="col-sm-2 joker" src="img/card.png" alt="card">
+<img class="col-sm-2 joker" id="cardA" src="img/card.png" alt="card">
+<img class="col-sm-2 joker" id="cardB" src="img/card.png" alt="card">
 </div>
 </div>
 
 
 <!-- The River, 5 cards -->
 <div class="row" id="river">
-<img class="col-sm-2 joker" src="img/card.png" alt="card">
-<img class="col-sm-2 joker" src="img/card.png" alt="card">
-<img class="col-sm-2 joker" src="img/card.png" alt="card">
+<img class="col-sm-2 joker" id="cardC" src="img/card.png" alt="card">
+<img class="col-sm-2 joker" id="cardD" src="img/card.png" alt="card">
 
-
-<img class="col-sm-2 joker" src="img/card.png" alt="card">
-
-<img class="col-sm-2 joker" src="img/card.png" alt="card">
 </div>
 
 
@@ -52,33 +46,46 @@
 
 
 
-<div class="row" id="dealer-player">
+
 
 <!-- Dealer Hand-->
-<div class="dealer">
-<img class="col-sm-2  joker" src="img/card.png" alt="card">
-</div>
 
 <!-- player's Hand, also 2 cards-->
-<div class="player">
-<img class="col-sm-2 joker" src="img/card.png" alt="card">
-<img class="col-sm-2 joker" src="img/card.png" alt="card">
+<div id="player">
+<img class="col-sm-2 joker" id="cardE" src="img/card.png" alt="card">
+<img class="col-sm-2 joker" id="cardF" src="img/card.png" alt="card">
 </div>
-</div>
+
 
 <div class="row" id="actions">
 <div class="col-sm-2" id="distribute">
-<button>Deal</button>
+<button onclick="deal()">Deal</button>
+
 </div>
 <div class="col-sm-2" id="bet">
-<button>Play</button>
+<button onclick="play()" > Play</button>
 </div>
 <div class="col-sm-2" id="fold">
-<button>Fold</button>
+<button onclick="fold()" > Fold</button>
+</div>
 </div>
 </div>
 
 
+
+
+
+<!--
+document.getElementById('demo').innerHTML = 'document.write(name)'; 
+
+function myFunction() {
+  alert("Are you feeling Lucky??");
+
+  Need to conver the object containing the cards into an array to log to the screen object.values
+  and use a new variable ie myArray below
+  var myArray = Object.values(person);
+  Could create a function converting the three card selections into individual arrays for each card holder
+} -->
 
 
 </body>
