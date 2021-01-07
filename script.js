@@ -66,30 +66,92 @@ class Player {
     }
 }
 
+var a ;
+var b ;
+var c ;
+var d ;
+var e ;
+var f ;
+
+
+
 class Game {
     constructor() {
     
     this.players = [];
     
-
     }
-    play() {
+    
+    sort() {
         
-      let go = new Dealer;
-      go.deal();
+      let flush = new Dealer;
+      flush.deal();
       let poker = new Player;
-      poker.assign(go.sixPlayingCards);
+      poker.assign(flush.sixPlayingCards);
       console.log([poker.player1Card1, poker.player1Card2, poker.player2Card1, poker.player2Card2, poker.river1, poker.river2])
 
-      var a = poker.player1Card1.toString();
-      var b = poker.player1Card2.toString();
-      var c = poker.player2Card1.toString();
-      var d = poker.player2Card2.toString();
-      var e =       poker.river1.toString();
-      var f =       poker.river2.toString();
+      a = poker.player1Card1.toString();
+      b = poker.player1Card2.toString();
+      c = poker.player2Card1.toString();
+      d = poker.player2Card2.toString();
+      e =       poker.river1.toString();
+      f =       poker.river2.toString();
 
- /* 
- if (c === 'Red' ) {document.getElementById("cardA").src = "img/Red_back.jpg"}
+
+    if (a === 'Red' ) {document.getElementById("cardE").src = "img/Red_back.jpg"}
+
+    else if (a === 'Green' ) {document.getElementById("cardE").src = "img/Green_back.jpg"}
+
+    else if (a === 'Purple' ) {document.getElementById("cardE").src = "img/purple_back.jpg"}
+
+    else {document.getElementById("cardE").src = "img/Yellow_back.jpg"}
+
+
+    if (b === 'Red' ) {document.getElementById("cardF").src = "img/Red_back.jpg"}
+
+    else if (b === 'Green' ) {document.getElementById("cardF").src = "img/Green_back.jpg"}
+
+    else if (b === 'Purple' ) {document.getElementById("cardF").src = "img/purple_back.jpg"}
+
+    else {document.getElementById("cardF").src = "img/Yellow_back.jpg"}
+
+
+    if (e === 'Red' ) {document.getElementById("cardC").src = "img/Red_back.jpg"}
+
+    else if (e === 'Green' ) {document.getElementById("cardC").src = "img/Green_back.jpg"}
+
+    else if (e === 'Purple' ) {document.getElementById("cardC").src = "img/purple_back.jpg"}
+
+    else {document.getElementById("cardC").src = "img/Yellow_back.jpg"}
+
+
+    if (f === 'Red' ) {document.getElementById("cardD").src = "img/Red_back.jpg"}
+
+    else if (f === 'Green' ) {document.getElementById("cardD").src = "img/Green_back.jpg"}
+
+    else if (f === 'Purple' ) {document.getElementById("cardD").src = "img/purple_back.jpg"}
+
+    else {document.getElementById("cardD").src = "img/Yellow_back.jpg" }
+ 
+}
+
+
+}
+
+;
+
+function deal(){
+let texas = new Game;
+texas.sort();
+
+
+    };
+
+    
+
+function play () { 
+
+    if (c === 'Red' ) {document.getElementById("cardA").src = "img/Red_back.jpg"}
 
     else if (c === 'Green' ) {document.getElementById("cardA").src = "img/Green_back.jpg"}
 
@@ -106,91 +168,118 @@ class Game {
 
     else {document.getElementById("cardB").src = "img/Yellow_back.jpg"}
 
+    
+    
 
 
 
-   */
+    function checkQuads (card1, card2, card3, card4, matchValue)
+    { 
+      if (card1 === card2 && card2 === card3 && card3 === card4){
+      return true;
+    }  else {
+        return false;
+      }
+    
+    };
 
 
-
-
-    if (a === 'Red' ) {document.getElementById("cardC").src = "img/Red_back.jpg"}
-
-    else if (a === 'Green' ) {document.getElementById("cardC").src = "img/Green_back.jpg"}
-
-    else if (a === 'Purple' ) {document.getElementById("cardC").src = "img/purple_back.jpg"}
-
-    else {document.getElementById("cardC").src = "img/Yellow_back.jpg"}
-
-
-    if (b === 'Red' ) {document.getElementById("cardD").src = "img/Red_back.jpg"}
-
-    else if (b === 'Green' ) {document.getElementById("cardD").src = "img/Green_back.jpg"}
-
-    else if (b === 'Purple' ) {document.getElementById("cardD").src = "img/purple_back.jpg"}
-
-    else {document.getElementById("cardD").src = "img/Yellow_back.jpg"}
-
-
-    if (e === 'Red' ) {document.getElementById("cardE").src = "img/Red_back.jpg"}
-
-    else if (e === 'Green' ) {document.getElementById("cardE").src = "img/Green_back.jpg"}
-
-    else if (e === 'Purple' ) {document.getElementById("cardE").src = "img/purple_back.jpg"}
-
-    else {document.getElementById("cardE").src = "img/Yellow_back.jpg"}
-
-
-    if (f === 'Red' ) {document.getElementById("cardF").src = "img/Red_back.jpg"}
-
-    else if (f === 'Green' ) {document.getElementById("cardF").src = "img/Green_back.jpg"}
-
-    else if (f === 'Purple' ) {document.getElementById("cardF").src = "img/purple_back.jpg"}
-
-    else {document.getElementById("cardF").src = "img/Yellow_back.jpg"}
- 
-}
-};
-
-function deal(){
-let goo = new Game;
-goo.play();
-
-
+    function checkTriple (card1, card2, card3, matchValue) { 
+      if (card1 === card2 && card2 === card3){
+      
+      return true;
+        }  else {
+        return false;
+      }
+    
     }
+  
+    function check (card1, card2, matchValue) { 
+      if (card1 === card2) { 
+      return true;
+    }  
+      else {
+        return false;
+      }
+    
+    }
+        
+
+    function checkAll () 
+    {
+                if(checkQuads(a,b,e,f) == true) {
+          
+                             alert("player 1 won");
+                     playerCount++;
+                      return;
+          }
+
+                    else if(checkQuads(c,d,e,f) == true) {
+          
+                             alert("player 2 won");
+                        computerCount++;
+                      return;
+          }
+                
+      
+      else if ((checkTriple(a,b,e) == true) || checkTriple(a,b,f) == true || checkTriple(a,e,f) == true) {
+             alert("player 1 won");
+                     playerCount++;
+                      return;
+            }
+
+        else if ((checkTriple(c,d,e) == true) || checkTriple(c,d,f) == true || checkTriple(f,d,e) == true) {
+             alert("player 2 won");
+                     computerCount ++;
+                      return;
+            }
 
 
 
-/*
-function play ()
-if 
 
-*/
+        else if ((check(a,b) == true) || check(a,e) == true || check(a,f) == true || check(b,e) == true || check(b,f) == true ) {
+             alert("player 1 won");
+                     playerCount ++
+                      return;
+            }
+                
+        else if ((check(c,d) == true) || check(c,e) == true || check(c,f) == true || check(d,e) == true || check(d,f) == true ) {
+             alert("player 2 won");
+                     computerCounter ++;
+                      return;
+            }
+
+             else if ((check(a,b) == true) || check(a,e) == true || check(a,f) == true || check(b,e) == true || check(b,f) == true  
+                && check(c,d) == true || check(c,e) == true || check(c,f) == true || check(d,e) == true || check(d,f) == true )
+             {
+             alert("Draw");
+            }
 
 
 
 
- 
+                
+            else { alert("It's a draw!")}
+} 
+
+function p1Increment() {document.getElementById("p1count").innerHTML = playerCount;}
+function p2Increment() {document.getElementById("p2count").innerHTML = computerCount;}
+checkAll();
+p1Increment();
+p2Increment();
+
+console.log(playerCount);
+console.log(computerCount);
+
+}
+
+function fold() {
+    location.reload();
+}
 
 
 
- 
-/*
- ***Card Rankings***
--- High card - player with highest value card in the event of no other combination
--- Pair - Any combination of two of the same value cards
--- Two pair - Any combination of two of the same value cards, held twice
--- Three of a kind - Any combination of three of the same value cards
--- Straight - Any combination of five cards in cronological incrementing order
--- Flush - Five cards of equal suit
--- Full house - A combination of three and two pairs of any combination
--- Four of a kind - Any combination of four of the same value cards
--- Straight Flush - A combination of five cards of the same suit in cronological order
--- Royal Flush - Highest combination, the Broadway of Diamonds (K,Q,J,10,A)
 
-***LOGIC***
-will use if statements 
+let playerCount = 0;
+let computerCount = 0;
 
-if (cardA = 2 && cardB || cardC || cardD ||cardE || cardF || cardG ||  = 2 ) {return 'pair'}
-
-  */
