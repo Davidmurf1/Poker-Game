@@ -235,6 +235,7 @@ function play () {
             }
 
 
+        
 
 
         else if ((check(a,b) == true) || check(a,e) == true || check(a,f) == true || check(b,e) == true || check(b,f) == true ) {
@@ -242,6 +243,8 @@ function play () {
                      playerCount ++
                       return;
             }
+
+
                 
         else if ((check(c,d) == true) || check(c,e) == true || check(c,f) == true || check(d,e) == true || check(d,f) == true ) {
              alert("player 2 won");
@@ -249,15 +252,8 @@ function play () {
                       return;
             }
 
-             else if ((check(a,b) == true) || check(a,e) == true || check(a,f) == true || check(b,e) == true || check(b,f) == true  
-                && check(c,d) == true || check(c,e) == true || check(c,f) == true || check(d,e) == true || check(d,f) == true )
-             {
-             alert("Draw");
-            }
-
-
-
-
+             
+            
                 
             else { alert("It's a draw!")}
 } 
