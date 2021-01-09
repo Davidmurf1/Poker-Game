@@ -1,5 +1,3 @@
-
-
 class card {
     constructor() {
         this.card = card;
@@ -209,27 +207,27 @@ function play () {
     {
                 if(checkQuads(a,b,e,f) == true) {
           
-                             alert("player 1 won");
+                             alert("You got Quads, you win!");
                      playerCount++;
                       return;
           }
 
                     else if(checkQuads(c,d,e,f) == true) {
           
-                             alert("player 2 won");
+                             alert("Player two got Quads, unlucky!");
                         computerCount++;
                       return;
           }
                 
       
       else if ((checkTriple(a,b,e) == true) || checkTriple(a,b,f) == true || checkTriple(a,e,f) == true) {
-             alert("player 1 won");
+             alert("You got triples, you win!");
                      playerCount++;
                       return;
             }
 
         else if ((checkTriple(c,d,e) == true) || checkTriple(c,d,f) == true || checkTriple(f,d,e) == true) {
-             alert("player 2 won");
+             alert("Player two got triples, unlcuky!");
                      computerCount ++;
                       return;
             }
@@ -239,7 +237,7 @@ function play () {
 
 
         else if ((check(a,b) == true) || check(a,e) == true || check(a,f) == true || check(b,e) == true || check(b,f) == true ) {
-             alert("player 1 won");
+             alert("You got a match, you win!");
                      playerCount ++
                       return;
             }
@@ -247,7 +245,7 @@ function play () {
 
                 
         else if ((check(c,d) == true) || check(c,e) == true || check(c,f) == true || check(d,e) == true || check(d,f) == true ) {
-             alert("player 2 won");
+             alert("Player two got a match unlucky!");
                      computerCounter ++;
                       return;
             }
