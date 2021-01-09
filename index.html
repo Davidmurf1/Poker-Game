@@ -20,9 +20,7 @@
 
 <div class="container-fluid" id="poker-table">
 <div class="header">
-<h1>The game is Colour Poker!</h1>
-<p>Best of Luck!</p>
-</div>
+<h1>The game is Colours Poker!</h1>
 
 <!-- The Computer's hand, 2 cards -->
 <div class="row" >
@@ -36,37 +34,48 @@
 
 <!-- The River, 5 cards -->
 <div class="row" id="river">
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Score</th>
+  </tr>
+  <tr>
+    <td>Player One</td>
+    <td id="p1count">0</td>    
+  </tr>
+   <tr>
+    <td>Player Two</td>
+    <td id="p2count">0</td>
+  </tr>
+</table>
 <img class="col-sm-2 joker" id="cardC" src="img/card.png" alt="card">
 <img class="col-sm-2 joker" id="cardD" src="img/card.png" alt="card">
 
+
 </div>
 
-
-
-
-
-
-
-
-<!-- Dealer Hand-->
+<!-- Dealer Hand  <img src="img/chips.jpg" style="height: 100px; width: 100px;"> -->
 
 <!-- player's Hand, also 2 cards-->
-<div id="player">
+<div class="row" id="player">
+
 <img class="col-sm-2 joker" id="cardE" src="img/card.png" alt="card">
 <img class="col-sm-2 joker" id="cardF" src="img/card.png" alt="card">
 </div>
 
 
 <div class="row" id="actions">
-<div class="col-sm-2" id="distribute">
+
+<div class="col-sm-3" id="distribute">
 <button onclick="deal()">Deal</button>
 
 </div>
-<div class="col-sm-2" id="bet">
+<div class="col-sm-3" id="bet">
 <button onclick="play()" > Play</button>
 </div>
-<div class="col-sm-2" id="fold">
-<button onclick="fold()" > Fold</button>
+<div class="col-sm-3" id="fold">
+<button onclick="fold()" > Restart</button>
 </div>
 </div>
 </div>
@@ -74,19 +83,11 @@
 
 
 
+<footer>
+	
 
-<!--
-document.getElementById('demo').innerHTML = 'document.write(name)'; 
 
-function myFunction() {
-  alert("Are you feeling Lucky??");
-
-  Need to conver the object containing the cards into an array to log to the screen object.values
-  and use a new variable ie myArray below
-  var myArray = Object.values(person);
-  Could create a function converting the three card selections into individual arrays for each card holder
-} -->
-
+</footer>
 
 </body>
 </html>
