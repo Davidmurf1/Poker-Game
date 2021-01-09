@@ -2,17 +2,36 @@
 
 
 
+
+
 #poker-table
 {
 padding-top: 50px;
 padding-bottom: 50px;
-background-image: url(img/cigar.jpg);
+background-image: url(img/poker-table.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
 
 
 }
+
+#instructions
+{
+height: 100vh;
+width:100%;
+padding-top: 50px;
+padding-bottom: 50px;
+background-image: url(img/poker-table.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+text-align: center;
+justify-content: center;
+color: black;
+font-size: 20px;
+}
+ul {list-style-type: none;}
 
 .header
 {
@@ -119,18 +138,22 @@ color:white;
 	button {width: 50px;}}
 
 
+
+
 table 
 {
 background-color: white;
 border-radius: 10px;
 color: black;
-background-image: url(img/dice.jpg);
-background-position: top-right;
-background-size: cover;
-
 }
+
+@media only screen and (max-width: 600px) 
+{table {font-size:10px;}}
 
 th, td {
 padding:10px;
 font-size: 20px;
 }
+
+@media only screen and (max-width: 600px) 
+{td, th {font-size:10px;}}

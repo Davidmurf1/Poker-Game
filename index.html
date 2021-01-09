@@ -1,93 +1,153 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Poker</title>
-
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-	<link rel="stylesheet" href="style.css">
-
-	<script type="text/javascript" src="scripts.js"></script>
-
-</head>
-<body>
-
-<div class="container-fluid" id="poker-table">
-<div class="header">
-<h1>The game is Colours Poker!</h1>
-
-<!-- The Computer's hand, 2 cards -->
-<div class="row" >
-<div id="computer-hand">
-
-<img class="col-sm-2 joker" id="cardA" src="img/card.png" alt="card">
-<img class="col-sm-2 joker" id="cardB" src="img/card.png" alt="card">
-</div>
-</div>
+#poker-table
+{
+padding-top: 50px;
+padding-bottom: 50px;
+background-image: url(img/poker-table.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
 
 
-<!-- The River, 5 cards -->
-<div class="row" id="river">
+}
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Score</th>
-  </tr>
-  <tr>
-    <td>Player One</td>
-    <td id="p1count">0</td>    
-  </tr>
-   <tr>
-    <td>Player Two</td>
-    <td id="p2count">0</td>
-  </tr>
-</table>
-<img class="col-sm-2 joker" id="cardC" src="img/card.png" alt="card">
-<img class="col-sm-2 joker" id="cardD" src="img/card.png" alt="card">
+#instructions
+{
+height: 100vh;
+width:100%;
+padding-top: 50px;
+padding-bottom: 50px;
+background-image: url(img/poker-table.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+text-align: center;
+justify-content: center;
+color: black;
+font-size: 20px;
+}
+ul {list-style-type: none;}
 
-
-</div>
-
-<!-- Dealer Hand  <img src="img/chips.jpg" style="height: 100px; width: 100px;"> -->
-
-<!-- player's Hand, also 2 cards-->
-<div class="row" id="player">
-
-<img class="col-sm-2 joker" id="cardE" src="img/card.png" alt="card">
-<img class="col-sm-2 joker" id="cardF" src="img/card.png" alt="card">
-</div>
+.header
+{
+color: white;
+text-align: center;
+justify-content: center;
+}
 
 
-<div class="row" id="actions">
+/* https://stackoverflow.com/questions/45097172/is-it-possible-to-add-image-as-box-shadow-with-css */
 
-<div class="col-sm-3" id="distribute">
-<button onclick="deal()">Deal</button>
+.joker 
+{
+height: 150px;
+width: 100px;
+border-radius: 10px;
+padding:10px;
+  box-shadow: 0px 0px 40px #ccc;
+        -moz-box-shadow: 0px 0px 40px #ccc;
+        -webkit-box-shadow: 0px 0px 40px #ccc;
+}
 
-</div>
-<div class="col-sm-3" id="bet">
-<button onclick="play()" > Play</button>
-</div>
-<div class="col-sm-3" id="fold">
-<button onclick="fold()" > Restart</button>
-</div>
-</div>
-</div>
+@media only screen and (max-width: 600px) {
+  .joker {
+ height: 150px;
+width: 75px;
+border-radius: 5px;
+  }
+
+}
+
+
+#dealer-hand 
+{
+display: flex;
+text-align: center;
+justify-content: center;
+
+}
+
+#computer-hand
+{
+margin: 20px;
+display: flex;
+text-align: center;
+justify-content: center;
+
+}
 
 
 
+#river
+{
+display: flex;
+text-align: center;
+justify-content: center;
+}
 
-<footer>
-	
 
 
-</footer>
 
-</body>
-</html>
+#player
+{
+margin-top: 20px;
+display: flex;
+text-align: center;
+justify-content: center;
+}
+
+
+#actions
+{
+display: flex;
+text-align: center;
+justify-content: center;
+padding: 10px;
+}
+.distribute
+{
+display: flex;
+}
+
+.bet
+{
+
+display: flex;
+}
+
+.fold
+{
+display: flex;
+}
+
+
+button
+{
+width: 100px;
+background-color: red;
+color:white;
+}
+
+
+@media only screen and (max-width: 600px) {
+	button {width: 50px;}}
+
+
+
+
+table 
+{
+background-color: white;
+border-radius: 10px;
+color: black;
+}
+
+@media only screen and (max-width: 600px) 
+{table {font-size:10px;}}
+
+th, td {
+padding:10px;
+font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) 
+{td, th {font-size:10px;}}
